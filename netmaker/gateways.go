@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/LiuChen001/netmaker/models"
+	"github.com/gravitl/netmaker/models"
 	"golang.org/x/exp/slog"
 )
 

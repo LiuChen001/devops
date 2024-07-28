@@ -2,7 +2,7 @@
 
 rm -rf netmaker-docs
 
-git clone https://www.github.com/LiuChen001/netmaker-docs
+git clone https://www.github.com/gravitl/netmaker-docs
 
 cp Dockerfile mod-html.sh netmaker-docs/
 

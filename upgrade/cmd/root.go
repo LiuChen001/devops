@@ -26,9 +26,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/LiuChen001/netmaker/models"
 	"github.com/gravitl/netclient/config"
 	"github.com/gravitl/netclient/ncutils"
+	"github.com/gravitl/netmaker/models"
 	_ "github.com/mattn/go-sqlite3" // need to blank import this package
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

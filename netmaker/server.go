@@ -3,7 +3,7 @@ package netmaker
 import (
 	"net/http"
 
-	"github.com/LiuChen001/netmaker/models"
+	"github.com/gravitl/netmaker/models"
 )
 
 func ServerConfig() *models.ServerConfig {
