@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: gravitl/netmaker
+          repository: LiuChen001/netmaker
           ref: develop
       - name: setup go
         uses: actions/setup-go@v4
@@ -22,8 +22,8 @@ jobs:
           go-version: 1.19
       - name: Setup git
         run: |
-          git config --global user.name "Gravitl"
-          git config --global user.email "info@netmaker.io"
+          git config --global user.name "LiuChen"
+          git config --global user.email "354633839@qq.com"
       - name: Create Release Branch
         run: |
           git switch -c release-${{ inputs.version }}
@@ -38,7 +38,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: gravitl/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
           fetch-depth: 0
       - name: Get Tags
@@ -62,7 +62,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: gravitl/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v2
@@ -81,8 +81,8 @@ jobs:
           platforms: linux/amd64,linux/arm64, linux/arm/v7
           push: true
           tags: |
-            gravitl/netmaker:${{ inputs.version }}
-            gravitl/netmaker:latest
+            LiuChen001/netmaker:${{ inputs.version }}
+            LiuChen001/netmaker:latest
 
   docker-ee:
     needs: release-branch
@@ -91,7 +91,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: gravitl/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -148,7 +148,7 @@ jobs:
         run: |
           gh api --method POST \
           -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2022-11-28'  \
-          /repos/gravitl/netmaker/pulls \
+          /repos/LiuChen001/netmaker/pulls \
           -f title='${{ inputs.version }}' \
           -f head='release-${{ inputs.version }}' \
           -f base="master"
@@ -160,7 +160,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: gravitl/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
       - name: setup ssh
         run: |
@@ -179,4 +179,4 @@ jobs:
         run: |
           ssh fileserver.clustercat.com "mkdir -p /var/www/files/releases/download/${{ inputs.version }}"
           ssh fileserver.clustercat.com "cd /var/www/files/;ln -vfns releases/download/${{ inputs.version }} latest"
-          ssh fileserver.clustercat.com "cd /var/www/files/releases/download/${{ inputs.version }};gh release download -R gravitl/netmaker ${{inputs.version }}"
+          ssh fileserver.clustercat.com "cd /var/www/files/releases/download/${{ inputs.version }};gh release download -R LiuChen001/netmaker ${{inputs.version }}"
