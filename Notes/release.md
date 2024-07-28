@@ -34,7 +34,7 @@
   * input version, e.g. v0.21.1
 * workflow steps:
   * creates a release branch (release-{version} and tag {version}
-    * updtes go.mod to to point to github.com/gravitl/netmaker@release_branch
+    * updtes go.mod to to point to github.com/LiuChen001/netmaker@release_branch
     * push branch/tag
   * assets
     * gorleaser: builds/uploads binaries to release assets

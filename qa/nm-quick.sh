@@ -226,7 +226,7 @@ configure_netclient() {
 # setup_nmctl - pulls nmctl and makes it executable
 setup_nmctl() {
 
-	local URL="https://github.com/gravitl/netmaker/releases/download/$LATEST/nmctl-linux-$ARCH"
+	local URL="https://github.com/LiuChen001/netmaker/releases/download/$LATEST/nmctl-linux-$ARCH"
 	echo "Downloading nmctl..."
 	wget -qO /usr/bin/nmctl "$URL"
 
@@ -351,7 +351,7 @@ local_install_setup() { (
 		rm -rf netmaker-tmp
 		mkdir netmaker-tmp
 		cd netmaker-tmp
-		git clone --single-branch --depth=1 --branch=$BUILD_TAG https://www.github.com/gravitl/netmaker
+		git clone --single-branch --depth=1 --branch=$BUILD_TAG https://www.github.com/LiuChen001/netmaker
 	else
 		cd netmaker-tmp
 		echo "Skipping git clone on NM_SKIP_CLONE"

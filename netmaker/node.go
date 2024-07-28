@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gravitl/netmaker/logic"
-	"github.com/gravitl/netmaker/models"
+	"github.com/LiuChen001/netmaker/logic"
+	"github.com/LiuChen001/netmaker/models"
 	"github.com/kr/pretty"
 )
 

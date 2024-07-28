@@ -3,7 +3,7 @@ package netmaker
 import (
 	"net/http"
 
-	"github.com/gravitl/netmaker/models"
+	"github.com/LiuChen001/netmaker/models"
 	"golang.org/x/exp/slog"
 )
 

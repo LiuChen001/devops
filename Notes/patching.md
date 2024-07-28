@@ -32,7 +32,7 @@
 * update release assets
   * checkout the release branch
   * update the netmaker import (if netmaker release has changed as well)
-    * go get github.com/gravitl/netmaker@v.0.21.0; go mod tidy; git commit -am 'update go.mod'; git push 
+    * go get github.com/LiuChen001/netmaker@v.0.21.0; go mod tidy; git commit -am 'update go.mod'; git push 
   * retag the release branch
      * e.g. git tag -f v0.21.0; git push
   * run goreleaser release --clean --release-notes release.md

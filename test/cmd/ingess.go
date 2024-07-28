@@ -20,8 +20,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gravitl/devops/netmaker"
-	"github.com/gravitl/devops/ssh"
+	"github.com/LiuChen001/devops/netmaker"
+	"github.com/LiuChen001/devops/ssh"
 	"github.com/spf13/cobra"
 	"golang.org/x/exp/slog"
 )

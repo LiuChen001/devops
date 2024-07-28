@@ -4,9 +4,9 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/gravitl/devops/do"
-	"github.com/gravitl/devops/logging"
-	"github.com/gravitl/devops/netmaker"
+	"github.com/LiuChen001/devops/do"
+	"github.com/LiuChen001/devops/logging"
+	"github.com/LiuChen001/devops/netmaker"
 	"github.com/joho/godotenv"
 )
 
