@@ -62,7 +62,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: liuchen002/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v2
@@ -91,7 +91,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: liuchen002/netmaker
+          repository: LiuChen001/netmaker
           ref: release-${{ inputs.version }}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
